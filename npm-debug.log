@@ -1,0 +1,108 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.15.5
+3 info using node@v5.8.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/pdw/Documents/workspace/@project/npm/js-string-byte',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/pdw/.npm/js-string-byte/1.0.1/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/pdw/.npm correctMkdir not in flight; initializing
+10 verbose tar pack [ '/Users/pdw/.npm/js-string-byte/1.0.1/package.tgz',
+10 verbose tar pack   '/Users/pdw/Documents/workspace/@project/npm/js-string-byte' ]
+11 verbose tarball /Users/pdw/.npm/js-string-byte/1.0.1/package.tgz
+12 verbose folder /Users/pdw/Documents/workspace/@project/npm/js-string-byte
+13 info prepublish js-string-byte@1.0.1
+14 verbose unsafe-perm in lifecycle true
+15 verbose addLocalTarball adding from inside cache /Users/pdw/.npm/js-string-byte/1.0.1/package.tgz
+16 verbose correctMkdir /Users/pdw/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd js-string-byte@1.0.1
+18 verbose afterAdd /Users/pdw/.npm/js-string-byte/1.0.1/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/pdw/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/pdw/.npm/js-string-byte/1.0.1/package/package.json written
+21 silly publish { name: 'js-string-byte',
+21 silly publish   version: '1.0.1',
+21 silly publish   description: 'get the length of string(byte, UTF-8)',
+21 silly publish   scripts:
+21 silly publish    { test: 'mocha test',
+21 silly publish      compile: 'babel -d lib/ src/',
+21 silly publish      prepublish: 'npm run compile' },
+21 silly publish   main: 'index.js',
+21 silly publish   author: { name: 'ingpdw', email: 'ingpdw@gmail.com' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/ingpdw/js-string-byte.git' },
+21 silly publish   license: 'MIT',
+21 silly publish   dependencies: {},
+21 silly publish   readme: '# js-string-byte\n\nGet the length of a string( bytes, UTF-8 )\n\n## Install\n\n```\n$npm install js-string-byte\n```\n\n## Usage\n\n```\nvar jsStringLength = require( \'js-string-byte\' );\n\nvar len = jsStringLength( \'hello\' );\n//5\n\nvar len = jsStringLength( \'hello :D~\' );\n//9\n\nvar len = jsStringLength( \'~~~\' );\n//3\n\n```\n\n## API\n\n```\njsStringLength( str, byte2048 = 3, byte128 = 2 );\n\n//if the charcode is over 2048... ( default = 3 )\n//if the charcode is over 127... ( default = 2 )\n\njsStringLength( \'hello\', 2, 2 );\n\n```\n\n## build\n* npm install babel -g\n* npm run compile\n\n## Test\n* npm install mocha -g\n* npm test\n\n## License\n© 2016 ingpdw. MIT License\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '66b8cfb457a03342aa89eb05517a7c39bf87ea79',
+21 silly publish   bugs: { url: 'https://github.com/ingpdw/js-string-byte/issues' },
+21 silly publish   homepage: 'https://github.com/ingpdw/js-string-byte#readme',
+21 silly publish   _id: 'js-string-byte@1.0.1',
+21 silly publish   _shasum: 'e1bb9d92e38c252784bafbd83567c7f45dc886ba',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name js-string-byte
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'js-string-byte',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'js-string-byte',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/js-string-byte
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/pdw/.npm/js-string-byte/1.0.1/package.tgz
+30 verbose request uri https://registry.npmjs.org/js-string-byte
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 11:31:06
+33 verbose request using bearer token for auth
+34 verbose request id 9abca46d83d7c709
+35 http request PUT https://registry.npmjs.org/js-string-byte
+36 http 403 https://registry.npmjs.org/js-string-byte
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Mon, 27 Jun 2016 02:30:58 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-itm7427-ITM',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1466994657.394763,VS0,VE665',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/pdw/.npm/registry.npmjs.org/js-string-byte on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.1." : js-string-byte
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+40 verbose stack     at emitTwo (events.js:100:13)
+40 verbose stack     at Request.emit (events.js:185:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+40 verbose stack     at emitOne (events.js:95:20)
+40 verbose stack     at Request.emit (events.js:182:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+41 verbose statusCode 403
+42 verbose pkgid js-string-byte
+43 verbose cwd /Users/pdw/Documents/workspace/@project/npm/js-string-byte
+44 error Darwin 15.2.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v5.8.0
+47 error npm  v2.15.5
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.1." : js-string-byte
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
