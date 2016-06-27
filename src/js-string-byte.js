@@ -1,5 +1,5 @@
 /*
- * shuffle - lib/js-string-byte.js
+ * js-string-byte - lib/js-string-byte.js
  * Copyright(c) 2016 ingpdw <ingpdw@gmail.com>
  */
 

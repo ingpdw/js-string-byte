@@ -1,6 +1,6 @@
 {
   "name": "js-string-byte",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "get the length of string(byte, UTF-8)",
   "scripts": {
     "test": "mocha test",
